@@ -4,8 +4,6 @@
 
 **Knowledge Representation (KR)** is a field in Artificial Intelligence that focuses on how to formally structure knowledge so that machines can use it to reason, learn, and make decisions.
 
-It involves encoding information about the world in a form that a computer system can utilize to solve complex tasks such as diagnosing a medical condition, understanding language, or making strategic decisions.
-
 > 🗣️ In simple terms: It’s how an AI *remembers and understands* facts, rules, relationships, and context.
 
 ---
@@ -40,10 +38,52 @@ There are several approaches to knowledge representation, each with its strength
 * Probabilistic graphs that represent uncertain knowledge.
 * Useful in decision-making under uncertainty.
 
-### 6. **Vector Embeddings**
+### 6. **Vector Embeddings (used in LLMs)**
 
-* Represents knowledge as dense numerical vectors (e.g., word2vec, BERT).
-* Common in modern NLP and deep learning models.
+* Represents knowledge as dense vectors in high-dimensional space.
+* Example: Words, sentences, or entities are mapped to vectors via models like Word2Vec, BERT, or GPT.
+* Allows semantic similarity, analogical reasoning, and flexible generalization.
+
+---
+
+## 📚 How Do LLMs Represent Knowledge?
+
+Large Language Models (LLMs) such as GPT-4, Claude, or Gemini **implicitly encode knowledge** in their model weights during training on massive text corpora.
+
+### 🔑 Key Mechanisms:
+
+#### ✅ 1. **Token Embeddings**
+
+* Each word, subword, or symbol is mapped to a dense vector that captures semantic properties.
+
+#### ✅ 2. **Contextual Representations**
+
+* Transformers model how tokens relate to each other across context windows.
+* Meaning changes dynamically based on context (e.g., "bank" in "river bank" vs. "money bank").
+
+#### ✅ 3. **Pretrained Parameters as Knowledge Store**
+
+* Millions to billions of parameters store statistical patterns about language, facts, and world knowledge.
+* Retrieval is implicit: no explicit facts or tables—everything is “remembered” through weights.
+
+#### ✅ 4. **In-Context Learning / Prompting**
+
+* Users can *inject* temporary knowledge at runtime by writing examples or rules in the prompt.
+* This mimics working memory or short-term knowledge activation.
+
+#### ✅ 5. **Retrieval-Augmented Generation (RAG)**
+
+* Combines pretrained models with external knowledge bases (e.g., vector databases or documents).
+* Augments LLMs with explicit memory retrieval for more accurate and up-to-date responses.
+
+---
+
+## 🔍 Challenges of Knowledge Representation in LLMs
+
+* ❌ **Implicit and opaque**: Knowledge is not directly inspectable or editable.
+* ❌ **Hard to update**: Changing knowledge often requires retraining or fine-tuning.
+* ❌ **Prone to hallucination**: LLMs may generate plausible-sounding but incorrect facts.
+* ✅ **Highly flexible**: Can represent abstract concepts and relationships in fluid, context-sensitive ways.
 
 ---
 
