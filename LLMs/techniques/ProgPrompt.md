@@ -232,3 +232,6 @@ Take the LLM-generated plan and **map each action to a real system command**.
 * Prevents **action hallucination** by grounding in real actions and objects
 * Produces **executable and interpretable plans**
 * Easily extensible to new environments by changing action lists and context
+
+## Reference
+Singh, I., Blukis, V., Mousavian, A., Goyal, A., Xu, D., Tremblay, J., Fox, D., Thomason, J., & Garg, A. (2023). ProgPrompt: Generating Situated Robot Task Plans using Large Language Models. 2023 IEEE International Conference on Robotics and Automation (ICRA), 11523–11530. https://doi.org/10.1109/ICRA48891.2023.10161317
