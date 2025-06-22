@@ -102,4 +102,133 @@ Achieves high executability and goal completion in both simulated and real-world
 
 CODEX > GPT-3 due to code fine-tuning, but base GPT-3 already performs well with ProgPrompt.
 
-🧪 In summary, ProgPrompt is a simple yet powerful method that bridges natural language understanding and symbolic robot control using structured code-based prompting.
+
+
+
+
+## Methodology
+**Programmatic Prompting Methodology: Making LLM Plans Executable and Grounded**
+
+This methodology is applicable to any domain where tasks need to be translated from high-level natural language descriptions into **structured, executable sequences**. Examples include robotic systems, software automation, virtual agents, educational tools, or intelligent assistants.
+
+---
+
+### **Step 1: Define the Action API**
+
+Clearly define the set of primitive actions available in the environment or system.
+
+* These actions should be represented as function names with parameters.
+* Examples:
+
+  * For software automation: `open(file)`, `click(button)`, `fill(form, data)`
+  * For virtual characters: `walk_to(location)`, `speak(text)`, `interact_with(object)`
+  * For household robots: `grab(obj)`, `putin(obj1, obj2)`, `open(container)`
+
+This step constrains the LLM’s output space to only include allowed and meaningful operations.
+
+---
+
+### **Step 2: Provide Current Context**
+
+List all **available objects or entities** in the current environment or task state.
+
+* Use explicit object lists like:
+
+  ```
+  objects = ['banana', 'bowl', 'fridge', 'microwave']
+  ```
+* This ensures that the LLM only plans using relevant entities, avoiding hallucinations.
+
+---
+
+### **Step 3: Use Code-Like Prompting Structure**
+
+Frame your prompt as if you are writing **part of a real program**, even if you’re not executing it as code.
+
+* Structure the plan as a function:
+
+  * Function name = task name (e.g., `def make_toast():`)
+  * Body = sequence of action function calls
+  * Add inline **natural language comments** to explain the purpose of each step
+* Example:
+
+  ```python
+  def throw_away_apple():
+      # Step 1: find apple
+      find('apple')
+      # Step 2: open garbage can
+      open('garbagecan')
+      # Step 3: put apple in garbage can
+      putin('apple', 'garbagecan')
+  ```
+
+---
+
+### **Step 4: Include a Few Example Programs**
+
+Use few-shot prompting by providing 2–3 complete examples of prior task plans.
+
+* These help the LLM learn:
+
+  * How to structure the function
+  * How to break down high-level goals into concrete actions
+  * What valid syntax and semantics look like
+
+---
+
+### **Step 5: Prompt the LLM to Generate a New Task Plan**
+
+Provide a high-level task goal (e.g., "clean the table") and ask the LLM to generate a structured function.
+
+* Optionally, start the function definition and let the model complete it:
+
+  ```python
+  def clean_table():
+      # Step 1: ...
+  ```
+
+---
+
+### **Step 6: Use Assertions and Recovery (Optional)**
+
+If your system allows environment state feedback, use **assert statements** to verify preconditions before each action.
+
+* Example:
+
+  ```python
+  assert('apple' in 'hands') else: grab('apple')
+  ```
+* This adds robustness to the plan and handles dynamic conditions during execution.
+
+---
+
+### **Step 7: Map and Execute**
+
+Take the LLM-generated plan and **map each action to a real system command**.
+
+* Each function call (e.g., `grab('banana')`) should correspond to:
+
+  * A callable API
+  * A UI automation step
+  * A physical robot skill
+* Ensure environment compatibility before execution (e.g., object exists, action supported).
+
+---
+
+### **Implications and Best Use Cases**
+
+**Domains that benefit from this method:**
+
+* Robotics and autonomous agents
+* RPA (Robotic Process Automation)
+* Intelligent tutoring systems
+* Game AI/NPC scripting
+* Workflow management platforms
+* Virtual assistants (task orchestration)
+
+**Key benefits:**
+
+* Encourages **structured thinking** in LLMs
+* Prevents **action hallucination** by grounding in real actions and objects
+* Produces **executable and interpretable plans**
+* Easily extensible to new environments by changing action lists and context
