@@ -43,6 +43,19 @@ JEPA focuses on **learning how the world works**, not just mapping inputs to out
 
 ---
 
+### 🔍 Difference: Predicting Next Token vs Predicting Embeddings
+
+| Aspect               | Next Token Prediction (LLM)                                               | Embedding Prediction (JEPA)                                                |
+| -------------------- | ------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| **Output Target**    | Predicts the **next word/token** directly (e.g., "cat" after "The black") | Predicts a **future latent representation** (embedding) of an unseen input |
+| **Prediction Space** | High-dimensional discrete space (vocabulary size: 50K+)                   | Continuous low-dimensional latent space (e.g., 1024-D vector)              |
+| **Goal**             | Maximize likelihood of next token in sequence                             | Model the **essential structure** of future input without low-level noise  |
+| **Training Signal**  | Cross-entropy loss on token prediction                                    | Distance between predicted and actual embedding (e.g., cosine or MSE)      |
+| **Generative?**      | Yes — autoregressive generation                                           | No — purely representational, not meant to output data                     |
+| **Focus**            | Captures statistical co-occurrence                                        | Captures **causal, structural, or abstract patterns**                      |
+
+---
+
 ### 🤖 What can **JEPA** teach us about **LLMs**?
 
 1. **Beyond next-token prediction**:
@@ -83,3 +96,8 @@ JEPA focuses on **learning how the world works**, not just mapping inputs to out
 | Key Strength      | Learns abstract relationships between context and target       |
 | LLM Inspiration   | Improve abstraction, robustness, and modularity                |
 | AGI Inspiration   | World modeling, modular learning, self-supervised adaptability |
+
+---
+
+## Reference
+https://ai.meta.com/blog/yann-lecun-advances-in-ai-research/
