@@ -14,9 +14,9 @@ The project serves as a knowledge base for researchers, practitioners, and enthu
 
 | Theory | Description |
 |---------|-------------|
-| [**Planning**](theories/Planning.md) | Fundamental AI subfield concerned with devising sequences of actions to achieve desired goals from initial states, including classical planning techniques and modern LLM-based approaches |
 | [**Knowledge Representation**](theories/Knowledge-Representation.md) | Methods for formally structuring knowledge so machines can reason, learn, and make decisions, covering logic-based, semantic networks, and vector embedding approaches |
 | [**Reasoning**](theories/Reasoning.md) | The process by which AI systems draw logical conclusions and make decisions, encompassing deductive, inductive, abductive, and commonsense reasoning types |
+| [**Planning**](theories/Planning.md) | Fundamental AI subfield concerned with devising sequences of actions to achieve desired goals from initial states, including classical planning techniques and modern LLM-based approaches |
 | [**Memories**](theories/Memories.md) | Specialized memory systems in AGI architectures including sensory, perceptual associative, spatial, episodic, declarative, procedural, and sequence memory types |
 | [**Continuous Learning**](theories/Continuous-Learning.md) | The ability of models to incrementally learn from new data over time without forgetting previous knowledge, addressing catastrophic forgetting challenges |
 | [**Critical Thinking**](theories/Critical-Thinking.md) | Advanced reasoning capabilities that enable systematic evaluation and analysis of information and arguments |
