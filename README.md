@@ -20,6 +20,10 @@ The project serves as a knowledge base for researchers, practitioners, and enthu
 | [**Memories**](theories/Memories.md) | Specialized memory systems in AGI architectures including sensory, perceptual associative, spatial, episodic, declarative, procedural, and sequence memory types |
 | [**Continuous Learning**](theories/Continuous-Learning.md) | The ability of models to incrementally learn from new data over time without forgetting previous knowledge, addressing catastrophic forgetting challenges |
 | [**Critical Thinking**](theories/Critical-Thinking.md) | Advanced reasoning capabilities that enable systematic evaluation and analysis of information and arguments |
+| [**Cognitive Architecture**](theories/Cognitive-Architecture.md) | Computational frameworks that model human cognitive processes and structures for building intelligent systems |
+| [**Evaluation**](theories/Evaluation.md) | Methods and metrics for assessing AI system performance, capabilities, and limitations across different tasks and domains |
+| [**Out-of-Distribution**](theories/Out-of-Distribution.md) | Challenges and approaches for handling data and scenarios that differ from training distributions |
+| [**Curriculum Learning**](theories/Curriculum-Learning.md) | Training strategies that present learning materials in a structured progression from simple to complex |
 
 ### AI Techniques
 
@@ -66,6 +70,14 @@ The project serves as a knowledge base for researchers, practitioners, and enthu
 
 | Technique | Description |
 |-----------|-------------|
+| [**Fine-Tuning**](LLMs/techniques/Fine-Tuning.md) | Training technique that adapts pre-trained models to specific tasks or domains by updating model parameters |
+| [**Adapter Modules**](LLMs/techniques/Adapter-Modules.md) | Lightweight modules inserted into pre-trained models for task-specific adaptation without full fine-tuning |
+| [**aLoRA**](LLMs/techniques/aLoRA.md) | Advanced Low-Rank Adaptation technique for efficient parameter-efficient fine-tuning of large language models |
+| [**LoRA**](LLMs/techniques/LoRA.md) | Low-Rank Adaptation method for efficient fine-tuning by adding trainable low-rank matrices to attention layers |
+| [**Tool Integration**](LLMs/techniques/Tool-Integration.md) | Techniques for enabling LLMs to effectively use external tools and APIs to extend their capabilities |
+| [**Tree-of-Thought**](LLMs/techniques/Tree-of-Thought.md) | Reasoning approach that explores multiple reasoning paths in a tree-like structure for complex problem solving |
+| [**In-Context Learning**](LLMs/techniques/In-Context-Learning.md) | Learning paradigm where models adapt to new tasks using examples provided in the input context |
+| [**Prompt Tuning**](LLMs/techniques/Prompt-Tuning.md) | Parameter-efficient fine-tuning method that optimizes continuous prompt embeddings while keeping model weights frozen |
 | [**LLM-Modulo Framework**](LLMs/techniques/LLM-Modulo.md) | Neuro-symbolic framework using LLMs as idea generators with external verifiers in a Generate-Test-Critique loop |
 | [**AgentTuning**](LLMs/techniques/AgentTuning.md) | Training method to enhance generalized agent abilities in LLMs while preserving general language understanding |
 | [**Self-Refine**](LLMs/techniques/Self-Refine.md) | Zero-shot iterative framework enabling LLMs to improve their own outputs through self-feedback and revision |
