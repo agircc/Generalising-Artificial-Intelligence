@@ -16,6 +16,8 @@ CNNs are especially good at tasks like:
 * Medical image analysis
 
 ---
+### Compare to DNNs
+DNN tries to learn everything at once. CNN picks out the important parts, like edges and shapes, and is much better for image tasks.
 
 ### 🤝 Relationship with LLMs
 

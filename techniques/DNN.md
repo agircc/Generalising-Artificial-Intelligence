@@ -79,3 +79,8 @@ So, without deep neural networks, **LLMs would not exist**.
 | Key Strength      | Learns complex patterns from raw data                              |
 | LLM Role          | Backbone of Transformer models like GPT                            |
 | AGI Role          | Core for perception, needs extension for memory, planning, control |
+
+---
+
+## Reference
+https://youtu.be/aircAruvnKk
