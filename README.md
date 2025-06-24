@@ -24,6 +24,7 @@ The project serves as a knowledge base for researchers, practitioners, and enthu
 | [**Evaluation**](theories/Evaluation.md) | Methods and metrics for assessing AI system performance, capabilities, and limitations across different tasks and domains |
 | [**Out-of-Distribution**](theories/Out-of-Distribution.md) | Challenges and approaches for handling data and scenarios that differ from training distributions |
 | [**Curriculum Learning**](theories/Curriculum-Learning.md) | Training strategies that present learning materials in a structured progression from simple to complex |
+| [**Argument from the Poverty of the Stimulus**](theories/Argument-from-the-Poverty-of-the-Stimulus.md) | Linguistic argument that children acquire complex language knowledge from limited input, with implications for efficient learning in AI systems |
 
 ### AI Techniques
 
